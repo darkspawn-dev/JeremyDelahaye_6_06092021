@@ -37,18 +37,26 @@
 
 h1 {
   margin-left: 50px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: #901c1c;
   font-size: 30px;
 }
 
 h2 {
+  font-family: "DM Sans", sans-serif;
   text-align: center;
   color: #d3573c;
   padding: 10px 0 10px 0;
   font-size: 40px;
 }
-
+p {
+  color: #901c1c;
+}
+p.contact{
+  font-family: 'DM sans';
+  font-weight: 600;
+  font-size: 25px;
+}
 .topnav a {
   color: #d3573c;
 }
@@ -58,6 +66,8 @@ span {
   border: 0.5px solid #c4c4c4;
   border-radius: 11px;
   padding: 2px 5px;
+  color: #901c1c;
+  
 }
 
 .link {
@@ -89,7 +99,7 @@ span {
   width: 200px;
   height: 200px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin-left: auto;
   margin-right: auto;
 }
@@ -171,7 +181,7 @@ span {
   width: 200px;
   height: 200px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: flex;
 }
 
@@ -244,6 +254,7 @@ figure {
 
 .dropdown {
   display: flex;
+  align-items: center;
   margin: 50px 0 0 200px;
   font-size: 28px;
 }
@@ -256,17 +267,28 @@ figure {
   text-align: center;
   font-size: 16px;
   height: 50px;
-  border-radius: 11px;
+  border-radius: 9px;
   border-style: none;
+  font-family: 'DM sans';
+  font-weight: 600;
+}
+figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.heart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  color: #901c1c;
+.heart{
+  margin-right: 20px;
   background-color: #901c1c;
+}
+.fas{
+  background-color: #901c1c;
+}
+
+label{
+  font-family: 'DM sans';
+  font-weight: 600;
 }
 
 /* Responsive */
@@ -277,18 +299,17 @@ figure {
     width: 100%;
     margin-left: 0;
   }
-.header-logo {
-  width: 40%;
-  align-self: flex-start;
-}
-h1 {
-  width: 50%;
-  
-}
+  .header-logo {
+    width: 40%;
+    align-self: flex-start;
+  }
+  h1 {
+    width: 50%;
+  }
 
-.navlinks a {
-  height: 30px;
-}
+  .navlinks a {
+    height: 30px;
+  }
 
   #gallery {
     margin-left: 10px;
@@ -323,4 +344,4 @@ h1 {
     width: 100%;
     padding: 0;
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
