@@ -51,12 +51,28 @@ h2 {
 }
 p {
   color: #901c1c;
+  margin-top: 5px;
+  margin-bottom: -10px;
+  font-size: 24px;
 }
-p.contact{
-  font-family: 'DM sans';
+p.contact {
+  font-family: "DM sans";
   font-weight: 600;
   font-size: 25px;
 }
+.accroche {
+  color: black;
+  font-size: 20px;
+line-height: 50px;
+
+}
+
+.prix {
+  border: none;
+  color: #757575;
+
+}
+
 .topnav a {
   color: #d3573c;
 }
@@ -67,7 +83,6 @@ span {
   border-radius: 11px;
   padding: 2px 5px;
   color: #901c1c;
-  
 }
 
 .link {
@@ -94,11 +109,9 @@ span {
 }
 
 .photographe {
-  border: 2px solid;
   border-radius: 100px;
   width: 200px;
   height: 200px;
-  -o-object-fit: cover;
   object-fit: cover;
   margin-left: auto;
   margin-right: auto;
@@ -130,15 +143,16 @@ span {
 }
 
 .contenue {
-  display: none;
+  display: flex;
   justify-content: center;
+
 }
 
 .button {
   font-size: 1.5em;
   border: none;
   border-radius: 11px;
-  background-color: #901c1c;
+  background-color: #DB8876;
 }
 
 .button:hover {
@@ -241,12 +255,21 @@ figure {
 
 .photog {
   width: 210px;
-  height: 90px;
+  height: 80px;
   background-color: #901c1c;
   border-radius: 11px;
   margin-left: 50px;
+  border: none;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding-bottom: 15px;
 }
 
+.photog:hover {
+  background-color: #d3573c;
+  border: none;
+}
 .contact {
   font-size: 30px;
   color: white;
@@ -269,7 +292,7 @@ figure {
   height: 50px;
   border-radius: 9px;
   border-style: none;
-  font-family: 'DM sans';
+  font-family: "DM sans";
   font-weight: 600;
 }
 figcaption {
@@ -278,19 +301,62 @@ figcaption {
   align-items: center;
 }
 
-.heart{
-  margin-right: 20px;
-  background-color: #901c1c;
-}
-.fas{
-  background-color: #901c1c;
+.fas {
+  position: absolute;
+
+  width: 50px;
+  height: 50px;
+  background: #911c1c;
 }
 
-label{
-  font-family: 'DM sans';
+label {
+  font-family: "DM sans";
   font-weight: 600;
 }
 
+#contact-section  {
+  display: flex;
+  justify-content: center;
+}
+.form {
+  color: black;
+  font-size: 64px;
+
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+align-items: center;
+  width:40%;
+  background-color:  #DB8876;
+}
+
+.contact-form input, .message {
+  width: 70%;
+  display: block;
+  height: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  color:black;
+  border: none;
+  outline: none;
+  margin: 15px 0;
+  text-transform: capitalize;
+}
+
+.message {
+  height: 200px;
+}
+
+.contact-btn {
+  width: 160px;
+  height: 60px;
+  background-color: #901c1c;
+  color: white;
+  border-radius: 8px;
+  border: none;
+
+}
 /* Responsive */
 @media screen and (max-width: 767px) {
   .topnav {
@@ -343,5 +409,11 @@ label{
   .link {
     width: 100%;
     padding: 0;
+  }
+
+  /* page photograph */
+  .description-photograph {
+    display: flex;
+    flex-direction: column;
   }
 } /*# sourceMappingURL=main.css.map */
