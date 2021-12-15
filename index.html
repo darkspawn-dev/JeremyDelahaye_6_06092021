@@ -1,182 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
-    <title>FishEye</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <title>Fisheye</title>
   </head>
-
   <body>
     <header>
-      <div class="contenue">
-        <button class="button"><span class="contenu">Passer au contenu</span></button>
-      </div>
-      <div class="container">
-        <div class="topnav">
-          <div class="header-logo">
-            <img alt="logo" src="FishEye_Photos/Logo.png" />
-          </div>
-          <div class="navlinks">
-          <ul>
-            <a href="#Portrait"><span>#Portrait</span></a>
-            <a href="#Art"><span>#Art</span></a>
-            <a href="#Fashion"><span>#Fashion</span></a>
-            <a href="#Architecture"><span>#Architecture</span></a>
-            <a href="#Travel"><span>#Travel</span></a>
-            <a href="#Sport"><span>#Sport</span></a>
-            <a href="#Animals"><span>#Animals</span></a>
-            <a href="#Events"><span>#Events</span></a>
-          </ul>
-        </div>
-        <h1>Nos Photographes</h1>
-      </div>
+        <img src="assets/images/logo.png" class="logo" />
+        <h1>Nos photographes</h1>
     </header>
-
-
-          <!------------- Main------------>
-    <main>
-      <section id="photograph">
-        <div class="container-photograph">
-          <img
-            class="photographe"
-            src="FishEye_Photos/Mimi/Portrait_Nora.jpg"
-            alt="Mimi Keel"
-          />
-
-          <div class="description">
-            <h2>Mimi Keel</h2>
-            <p>
-              London, UK <br />
-              Voir le beau dans le quotidien<br />
-              400€ / jour
-            </p>
-          </div>
-          
-          <div class="link">
-            <ul>
-              <a href="#Portrait"><span>#Portrait</span></a>
-              <a href="#Events"><span>#Events</span></a>
-              <a href="#Animals"><span>#Animals</span></a>
-              <a href="#Travel"><span>#Travel</span></a>
-            </ul>
-          </div>
-        </div>
-        <div class="container-photograph">
-          <img
-            class="photographe"
-            src="FishEye_Photos/Ellie Rose/Architecture_Connected_Curves.jpg"
-            alt="Ellie-Rose Wilkens"
-          />
-          <div class="description">
-            <h2>Ellie-Rose Wilkens</h2>
-            <p>
-              Paris, France <br />
-              Travail sur des compositions complexes<br />
-              250€ / jour
-            </p>
-          </div>
-          <div class="link">
-            <ul>
-              <a href="#Sports"><span>#Sports</span></a>
-              <a href="#Architecture"><span>#Architecture</span></a>
-            </ul>
-          </div>
-        </div>
-        <div class="container-photograph">
-          <img
-            class="photographe"
-            src="FishEye_Photos/Tracy/Fashion_Urban_Jungle.jpg"
-            alt="Tracy Galindo"
-          />
-          <div class="description">
-            <h2>Tracy Galindo</h2>
-            <p>
-              Montreal, Canada <br />
-              Photographe Freelance<br />
-              500€ / jour
-            </p>
-          </div>
-          <div class="link">
-            <ul>
-              <a href="#fashion"><span>#Sports</span></a>
-              <a href="#Arts"><span>#Arts</span></a>
-              <a href="#events"><span>#Arts</span></a>
-            </ul>
-          </div>
-        </div>
-        <div class="container-photograph">
-          <img
-            class="photographe"
-            src="FishEye_Photos/Nabeel/Travel_Bridge_into_Forest.jpg"
-            alt="Mimi Keel"
-          />
-
-          <div class="description">
-            <h2>Nabeel Bradford</h2>
-            <p>
-              Mexico City, Mexico <br />
-              Je vais toujours de l'avant<br />
-              350€ / jour
-            </p>
-          </div>
-          
-          <div class="link">
-            <ul>
-              <a href="#portraits"><span>#portraits</span></a>
-              <a href="#travel"><span>#travel</span></a>
-            </ul>
-          </div>
-        </div>
-        <div class="container-photograph">
-          <img
-            class="photographe"
-            src="FishEye_Photos/Rhode/Sport_Butterfly.jpg"
-            alt="Ellie-Rose Wilkens"
-          />
-          <div class="description">
-            <h2>Rhode Dubois</h2>
-            <p>
-              Barcelona; Spain <br />
-              Créatrice de souvenirs<br />
-              375€ / jour
-            </p>
-          </div>
-          <div class="link">
-            <ul>
-              <a href="#Sports"><span>#Sports</span></a>
-              <a href="#fashion"><span>#fashion</span></a>
-              <a href="#events"><span>#events</span></a>
-              <a href="#animals"><span>#animals</span></a>
-            </ul>
-          </div>
-        </div>
-        <div class="container-photograph">
-          <img
-            class="photographe"
-            src="FishEye_Photos/Marcel/Architecture_On_a_hill.jpg"
-            alt="Tracy Galindo"
-          />
-          <div class="description">
-            <h2>Marcel Nikolic</h2>
-            <p>
-              Berlin, Germany <br />
-              Toujours à la recherche de LA photo<br />
-              300€ / jour
-            </p>
-          </div>
-          <div class="link">
-            <ul>
-              <a href="#travel"><span>#travel</span></a>
-              <a href="#architecture"><span>#architecture</span></a>
-            </ul>
-          </div>
-        </div>
-      </section>
+    <main id="main">
+        <div class="photographer_section"></div>
     </main>
+    <script src="scripts/factories/Photographer.js"></script>
+    <script src="scripts/pages/index.js"></script>
+    <script src="scripts/pages/photographer.js"></script>
   </body>
 </html>
