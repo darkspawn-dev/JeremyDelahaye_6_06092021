@@ -1,8 +1,9 @@
 let medias = "";
 let media = [];
+let totalLike = "";
 const sortList = document.getElementById('sortList');
 const mediaSection = document.querySelector(".media-section");
-let totalLike = "";
+
 
 async function getMedia() {
   medias = await getData("media");

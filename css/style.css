@@ -175,11 +175,15 @@ hr {
   
   .media-section {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
     margin: 100px 0;
     justify-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: center;
+    position: absolute;
+    column-gap: 180px;
+    row-gap: 15px;
+    width: 100%;
   }
   .media-section article {
     display: grid;

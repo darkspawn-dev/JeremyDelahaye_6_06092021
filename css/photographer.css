@@ -1,5 +1,7 @@
 #contact_modal {
     display: none;
+    z-index: 1;
+    position: relative;
 }
 
 .photograph-header {

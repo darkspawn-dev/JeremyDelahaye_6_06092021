@@ -1,10 +1,10 @@
 // Creation des éléments gallerie profil
 function mediaFactory(data) {
-  const { image, title, video } = data;
+  const { image, title, video, likes } = data;
   const picture = `assets/images/${id}/${image}`;
   const mpg = `assets/images/${id}/${video}`;
 
-console.log(picture)
+  console.log(mpg)
   function getUserCardDOM() {
     const article = document.createElement("article");
     const img = document.createElement("img");
@@ -13,6 +13,7 @@ console.log(picture)
     const h3 = document.createElement("h3");
     const likeIcon = document.createElement('img');
     h2.textContent = title;
+    h3.textContent = likes + ' ';
     likeIcon.setAttribute("src", "assets/icons/likes.svg");
     if (video !== undefined) {
      movies.setAttribute("src", mpg);
@@ -25,6 +26,7 @@ console.log(picture)
     article.appendChild(h2);
     article.appendChild(h3);
     h3.appendChild(likeIcon)
+
     return article;
   }
   return { getUserCardDOM };

@@ -8,7 +8,7 @@ async function init() {
     mediaSection.innerHTML = "";
     await getMedia();
     sortMedia();
-    //calcLike();
+    calcLike();
     displayData();
   }
   
