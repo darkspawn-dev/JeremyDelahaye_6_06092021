@@ -181,7 +181,7 @@ hr {
     justify-content: center;
     align-content: center;
     position: absolute;
-    column-gap: 180px;
+    column-gap: 100px;
     row-gap: 15px;
     width: 100%;
   }

@@ -1,7 +1,8 @@
 async function init() {
     const { photographer } = await getPhotographer();
     await initmedia();
-    displayHeader(photographer);
+  displayHeader(photographer);
+  contactName(photographer)
 }
   async function initmedia() {
     media = [];

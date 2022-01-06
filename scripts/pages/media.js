@@ -23,7 +23,7 @@ async function displayData() {
   });
 }
 
-//sortList.addEventListener('change', init)
+sortList.addEventListener('change', init)
 sortList.addEventListener('mouseover',activeSort)
 sortList.addEventListener('mouseout', notactiveSort)
 
@@ -54,7 +54,7 @@ function sortMedia(){
 
 function calcLike(){
   let tempLike = 0
-  for(i=0; i<media.length;i++){
+  for(i = 0; i<media.length;i++){
     tempLike = tempLike + media[i].likes;
     totalLike = tempLike
   }
