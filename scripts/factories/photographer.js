@@ -18,16 +18,22 @@ function photographerFactory(data) {
       
         const h4 = document.createElement( 'h4' );
         h4.textContent = tagline;
+        
+        
+        const h5 = document.createElement('h5');
 
-        const h5 = document.createElement( 'h5' );
         h5.textContent = price + "€/jour";
+   
         article.appendChild(a);
         a.appendChild(img)
         a.appendChild(h2)
         article.appendChild(h3);
         article.appendChild(h4);
         article.appendChild(h5);
-         return (article);
+        return (article);
+        
     }
-    return { name, picture, getUserCardDOM }
+
+    return { getUserCardDOM }
+    
 }

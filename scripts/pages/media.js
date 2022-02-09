@@ -1,12 +1,8 @@
-let medias = "";
-let media = [];
-let totalLike = "";
-const sortList = document.getElementById('sortList');
+
 const mediaSection = document.querySelector(".media-section");
 
-
 async function getMedia() {
-  medias = await getData("media");
+ let medias = await getData("media");
   for (let i = 0; i < medias.length; i++) {
     if (medias[i].photographerId == id) {
       media.push(medias[i]);
@@ -23,39 +19,60 @@ async function displayData() {
   });
 }
 
-sortList.addEventListener('change', init)
-sortList.addEventListener('mouseover',activeSort)
-sortList.addEventListener('mouseout', notactiveSort)
+const list = document.getElementById("dropdown")
+list.children[0].addEventListener('click',toggleDropdownOptions)
+let sortBy = list.children[0].children[0].innerText
+function toggleDropdownOptions()
+{
+	const dropdownOptions = list.children[1];
+	if(dropdownOptions.style.display=="")
+	{
+		dropdownOptions.style.display = "block";
+	}
+	else
+	{
+		dropdownOptions.style.display = "";
+	}
+}
+list.children[1].addEventListener("keypress",selectDropdownOption)
+list.children[1].addEventListener("click",selectDropdownOption)
+function selectDropdownOption(event)
+{
 
-function activeSort(){
-  sortList.className += 'active'
-}
-function notactiveSort(){
-  sortList.className = ''
-}
-function sortMedia(){
-  var sortBy = sortList.options[sortList.selectedIndex].value;
-  if(sortBy == "byPopularity"){
-    media.sort((a,b) => b.likes - a.likes)
-  }
-  if(sortBy == "byDate"){
-    media.sort(function (a,b){
-      let DateA = Date.parse(a.date);
-      let DateB = Date.parse(b.date);
-      return DateB - DateA})
-  }
-  if(sortBy == "byTitle"){
-    media.sort(function(a,b){
-      if(a.title < b.title){return -1}
-      if(a.title > b.title){return 1}
-      return 0})
-  }
+	const option = event;
+
+	const optionValue = option.target.innerText;
+
+	const listValue = list.children[0].children[0];
+
+	option.target.innerText = listValue.innerText;
+
+	listValue.innerText = optionValue;
+    sortBy = list.children[0].children[0].innerText
+    toggleDropdownOptions();
+    initmedia();
 }
 
-function calcLike(){
-  let tempLike = 0
-  for(i = 0; i<media.length;i++){
-    tempLike = tempLike + media[i].likes;
-    totalLike = tempLike
+function sortMedia() {
+    if (sortBy == "Popularité") {
+      media.sort((a, b) => b.likes - a.likes);
+    }
+    if (sortBy == "Date") {
+      media.sort(function (a, b) {
+        let DateA = Date.parse(a.date);
+        let DateB = Date.parse(b.date);
+        return DateB - DateA;
+      });
+    }
+    if (sortBy == "Titre") {
+      media.sort(function (a, b) {
+        if (a.title < b.title) {
+          return -1;
+        }
+        if (a.title > b.title) {
+          return 1;
+        }
+        return 0;
+      });
+    }
   }
-}

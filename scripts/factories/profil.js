@@ -7,7 +7,7 @@ function photographerFactory(data) {
 
     function getUserCardDOM() {
         const header = document.querySelector(".photograph-header");
-        const likenprice = document.querySelector(".like-n-price")
+        const likenprice = document.querySelector(".LikeTotal")
         const img = document.createElement( 'img' );
         img.setAttribute("src", picture);
         const h2 = document.createElement( 'h2' );
@@ -25,6 +25,8 @@ function photographerFactory(data) {
         const likeicon = document.createElement('img');
         likeicon.setAttribute("src", "assets/icons/likesblack.svg");
         pricey.textContent = price + "€ / jour";
+        
+        likey.textContent = totalLike;
         likenprice.appendChild(pricey);
         likenprice.appendChild(likey);
         likey.appendChild(likeicon);
