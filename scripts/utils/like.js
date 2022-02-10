@@ -10,10 +10,12 @@ const likeIcons = document.getElementsByClassName("likeIcon");
 
 function likeIcon() {
   for (let i = 0; i < likeIcons.length; i++) {
-    likeIcons[i].addEventListener("click", addLike())
-
+    likeIcons[i].addEventListener("click", addLike);
   }
-  function addLike(event) {
-    updateLike(event.target, 1);
-  }
+}
+function addLike(event) {
+  const counter = event.target.parentNode.querySelector("span");
+  const totalLikeCounter = document.getElementById("totalLikeCounter");
+  counter.textContent = parseInt(counter.textContent, 10) + 1;
+  totalLikeCounter.textContent = parseInt(totalLikeCounter.textContent, 10) + 1;
 }

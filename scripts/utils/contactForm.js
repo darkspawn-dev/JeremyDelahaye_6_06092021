@@ -1,67 +1,30 @@
 class Modal {
-  elementId = null
+  elementId = null;
 
   constructor(elementId) {
-    this.elementId = elementId
-    this.modal = document.getElementById(elementId)
-    this.style = this.modal.style
+    this.elementId = elementId;
+    this.modal = document.getElementById(elementId);
+    this.style = this.modal.style;
   }
 
   display() {
-    this.style.display = "block"
+    this.style.display = "block";
   }
 
   close() {
-    this.style.display = "none"
+    this.style.display = "none";
   }
 
   contactName(data) {
     const { name } = data;
-  
+
     const header = document.querySelector(`#${this.elementId} header h2`);
     header.innerHTML += name;
     return header;
   }
+}
 
-  // validate() {
-  //   let first = this.modal.contact.first.value
-  //   let last = this.modal.getElementsById("last").value;
-  //   let email = this.modal.getElementById("email").value;
-  //   let message = this.modal.getElementById("message").value;
-  //   let error_message = this.modal.getElementById("error_message");
-  
-  //   error_message.style.padding = "0px";
-  
-  //   // verification des champs & validation des champs
-  //   let text;
-  //   if (first.length < 4) {
-  //     text = "Entrer un Prénom valide";
-  //     error_message.innerHTML = text;
-  //     return false;
-  //   }
-  //   if (last.length < 4) {
-  //     text = "Entrer un Nom valide";
-  //     error_message.innerHTML = text;
-  //     return false;
-  //   }
-  
-  //   if (email.indexOf("@") == -1 || email.length < 6) {
-  //     text = "Entrer une Email valide";
-  //     error_message.innerHTML = text;
-  //     return false;
-  //   }
-  //   if (message.length <= 100) {
-  //     text = "Entrer minimum 100 caractere";
-  //     error_message.innerHTML = text;
-  //     return false;
-  //   }
-  //   alert("Form Submitted Successfully!");
-  //   return true;
-  }
-
-
-const contactModal = new Modal("contact_modal")
-
+const contactModal = new Modal("contact_modal");
 
 function validate() {
   let first = document.getElementById("first").value;

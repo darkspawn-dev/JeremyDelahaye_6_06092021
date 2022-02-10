@@ -14,9 +14,10 @@ function mediaFactory(data) {
     const h2 = document.createElement("h2");
     const h3 = document.createElement("h3");
     const likeIcon = document.createElement("img");
-    
+    const likeCounter = document.createElement("span");
+    likeIcon.classList.add("likeIcon");
     h2.textContent = title;
-    h3.textContent = likes;
+    likeCounter.textContent = likes;
     
     likeIcon.setAttribute("src", "assets/icons/likes.svg");
   
@@ -30,11 +31,13 @@ function mediaFactory(data) {
 
     if (image !== undefined) {
       img.setAttribute("src", picture);
+      img.setAttribute("alt", title);
       article.appendChild(img)
     }
 
     article.appendChild(h2);
     article.appendChild(h3);
+    h3.appendChild(likeCounter);
     h3.appendChild(likeIcon);
 
     return article;

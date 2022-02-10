@@ -22,13 +22,16 @@ function photographerFactory(data) {
         header.appendChild(h4);
         const pricey = document.createElement( 'h2');
         const likey = document.createElement('h3');
+        const totalLikeCounter = document.createElement('span');
+        totalLikeCounter.id = "totalLikeCounter";
         const likeicon = document.createElement('img');
         likeicon.setAttribute("src", "assets/icons/likesblack.svg");
         pricey.textContent = price + "€ / jour";
         
-        likey.textContent = totalLike;
+        totalLikeCounter.textContent = totalLike;
         likenprice.appendChild(pricey);
         likenprice.appendChild(likey);
+        likey.appendChild(totalLikeCounter);
         likey.appendChild(likeicon);
         return (header);
     }
