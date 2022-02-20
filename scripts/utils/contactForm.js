@@ -54,11 +54,16 @@ function validate() {
     error_message.innerHTML = text;
     return false;
   }
-  if (message.length <= 100) {
-    text = "Entrer minimum 100 caractere";
+  if (message.length <= 10) {
+    text = "Entrer minimum 10 caracteres";
     error_message.innerHTML = text;
     return false;
   }
   alert("Form Submitted Successfully!");
   return true;
 }
+
+
+
+// affichage résultats entrée formulaire dans la console
+// console.log(location.search.substring(1));

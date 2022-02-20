@@ -7,10 +7,12 @@ function photographerFactory(data) {
     function getUserCardDOM() {
         const article = document.createElement('article');
         const a = document.createElement('a');
-        a.setAttribute("href", "photographer.html?id=" + id);
+        a.setAttribute("href", "photographer.html?id=" + id,);
+
         const img = document.createElement('img');
-        img.setAttribute("src", picture)
-        
+        img.setAttribute("alt", name)
+        img.setAttribute("src", picture);
+
         const h2 = document.createElement('h2');
         h2.textContent = name;  
       
@@ -36,5 +38,5 @@ function photographerFactory(data) {
     }
 
     return { getUserCardDOM }
-    
 }
+

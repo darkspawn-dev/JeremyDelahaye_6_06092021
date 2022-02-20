@@ -1,4 +1,4 @@
-    async function getPhotographers() {
+ function getPhotographers() {
         // Penser à remplacer par les données récupérées dans le json
         const photographers = [
             {
@@ -62,7 +62,7 @@
             photographers: [...photographers]})
     }
     // affichage data
-       async function displayData(photographers) {
+      function displayData(photographers) {
         const photographersSection = document.querySelector(".photographer_section");
 
         photographers.forEach((photographer) => {
@@ -72,9 +72,9 @@
         });
     }
 
-    async function init() {
+   function init() {
         // Récupère les datas des photographes
-        const { photographers } = await getPhotographers();
+        const { photographers } = getPhotographers();
         displayData(photographers);
     }
     

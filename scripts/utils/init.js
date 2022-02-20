@@ -5,8 +5,8 @@ async function init() {
   contactModal.contactName(photographer);
 }
 async function initmedia() {
-  media = []; // a refaire
-  sortBy = list.children[0].children[0].innerText; // a refaire
+  media = [];
+  sortBy = list.children[0].children[0].innerText;
   mediaSection.innerHTML = "";
   await getMedia();
   sortMedia();

@@ -20,7 +20,8 @@ async function displayData() {
 }
 
 const list = document.getElementById("dropdown")
-list.children[0].addEventListener('click',toggleDropdownOptions)
+list.children[0].addEventListener('click', toggleDropdownOptions)
+list.children[0].addEventListener("keypress",selectDropdownOption)
 let sortBy = list.children[0].children[0].innerText
 function toggleDropdownOptions()
 {
