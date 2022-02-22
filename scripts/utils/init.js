@@ -15,6 +15,7 @@ async function initmedia() {
   likeIcon();
   Lightbox();
 
+  validate();
 }
 
 init();

@@ -42,28 +42,34 @@ function validate() {
     text = "Entrer un Prénom valide";
     error_message.innerHTML = text;
     return false;
+  } else {
+    console.log('Nom:', first)
   }
   if (last.length < 8) {
     text = "Entrer un Nom valide";
     error_message.innerHTML = text;
     return false;
+  } else {
+    console.log('Prénom:', last)
   }
-
   if (email.indexOf("@") == -1 || email.length < 6) {
     text = "Entrer une Email valide";
     error_message.innerHTML = text;
     return false;
+  } else {
+    console.log('Email:', email)
   }
   if (message.length <= 10) {
     text = "Entrer minimum 10 caracteres";
     error_message.innerHTML = text;
     return false;
+  } else {
+    console.log('Message:', message)
   }
-  alert("Form Submitted Successfully!");
-  return true;
+
+    console.log("Form Submitted Successfully!");
+    return true;
+
 }
 
 
-
-// affichage résultats entrée formulaire dans la console
-// console.log(location.search.substring(1));

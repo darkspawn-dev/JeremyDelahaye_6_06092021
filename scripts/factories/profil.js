@@ -1,4 +1,4 @@
-// Creation des éléments header profil
+// creation élément header
 
 function photographerFactory(data) {
     const { name, portrait, city, country, tagline, price} = data;
@@ -27,7 +27,7 @@ function photographerFactory(data) {
         const likeicon = document.createElement('img');
         likeicon.setAttribute("src", "assets/icons/likesblack.svg");
         pricey.textContent = price + "€ / jour";
-        
+
         totalLikeCounter.textContent = totalLike;
         likenprice.appendChild(pricey);
         likenprice.appendChild(likey);
