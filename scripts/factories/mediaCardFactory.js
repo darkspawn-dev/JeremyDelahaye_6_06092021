@@ -6,8 +6,8 @@ export class MediaCardFactory {
     if (media.type === "video") {
       mediaContainer = document.createElement("video");
     } else {
-        mediaContainer = document.createElement("img");
-        mediaContainer.setAttribute("alt", media.title);
+      mediaContainer = document.createElement("img");
+      mediaContainer.setAttribute("alt", media.title);
     }
     mediaContainer.setAttribute("src", media.src);
     mediaContainer.setAttribute("tabindex", "0");

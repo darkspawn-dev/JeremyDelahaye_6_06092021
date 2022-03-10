@@ -9,12 +9,20 @@ export class MediaGallery {
     this.totalLikesCounter = document.getElementById(totalLikeCounterId);
     this.lightbox = new Lightbox(lightboxContainerId);
     this.currentMediaIndex = null;
+
     this.lightbox.next.addEventListener("click", (e) => this.lightboxNext());
     this.lightbox.previous.addEventListener("click", (e) =>
       this.lightboxPrevious()
     );
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") {
+        this.lightboxPrevious();
+      }
+      if (e.key === "ArrowRight") {
+        this.lightboxNext();
+      }
+    });
   }
-
 
   render(sortBy) {
     const factory = new MediaCardFactory();
@@ -31,6 +39,9 @@ export class MediaGallery {
       card
         .querySelector(".mediaElement")
         .addEventListener("click", (e) => this.toggleLightbox(m.id));
+      card
+        .querySelector(".mediaElement")
+        .addEventListener("keypress", (e) => this.toggleLightbox(m.id));
       this.totalLikes += m.likes;
       this.container.appendChild(card);
     }
@@ -84,8 +95,9 @@ export class MediaGallery {
       this.lightbox.next.style.display = "block";
     }
   }
-// lightbox previous
+  // lightbox previous
   lightboxPrevious() {
+    if (this.currentMediaIndex === 0) return;
     this.currentMediaIndex--;
     if (this.currentMediaIndex === 0) {
       this.lightbox.previous.style.display = "none";
@@ -98,10 +110,11 @@ export class MediaGallery {
       this.lightbox.next.style.display = "block";
     }
     this.lightbox.display(this.sortMedia()[this.currentMediaIndex]);
-
   }
-// lighbox next
+  
+  // lighbox next
   lightboxNext() {
+    if (this.currentMediaIndex === this.media.length - 1) return;
     this.currentMediaIndex++;
     if (this.currentMediaIndex === 0) {
       this.lightbox.previous.style.display = "none";

@@ -4,13 +4,30 @@ export class Lightbox {
     this.container
       .querySelector(".lightbox-close")
       .addEventListener("click", (e) => this.toggle());
+    this.container
+      .querySelector(".lightbox-close")
+      .addEventListener("keypress", (e) => this.toggle());
     this.previous = this.container.querySelector(".lightbox-previous");
     this.next = this.container.querySelector(".lightbox-next");
+
+    this.toggleEvents() 
   }
 
-//affichage de la lightbox
+  //lighbox navigatuion
+  toggleEvents() {
+    const nav = (event) => {
+      if (event.key === "Escape" && this.container.style.display === "block") {
+        this.toggle();
+      }
+    }
+     
+      document.addEventListener("keydown", nav);
+    
+  }
+
+  //affichage de la lightbox
   toggle(media) {
-    if (this.container.style.display === "none") {
+    if (this.container.style.display === "none" && media) {
       this.container.style.display = "block";
       this.display(media);
     } else {
