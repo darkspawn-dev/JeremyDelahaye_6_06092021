@@ -10,7 +10,7 @@ const photographerId = parseInt(
   10
 );
 const photographersData = await getData(
-  "data/photographers.json",
+  "./data/photographers.json",
   "photographers"
 );
 
