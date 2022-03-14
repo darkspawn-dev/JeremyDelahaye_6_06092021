@@ -7,6 +7,6 @@ export class Photographer{
         this.country = country;
         this.tagline = tagline;
         this.price = price;
-        this.picture = `../assets/images/Photographers_ID_Photos/${portrait}`;
+        this.picture = `./assets/images/Photographers_ID_Photos/${portrait}`;
     }   
 }
