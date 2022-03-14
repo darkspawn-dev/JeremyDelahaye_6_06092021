@@ -36,7 +36,10 @@ const h4 = header.querySelector("h4");
 h4.textContent = photographer.tagline;
 
 const likenprice = document.getElementById("LikeTotal");
+likenprice.setAttribute("tabindex", "0");
 const pricey = likenprice.querySelector("h2");
+pricey.setAttribute("tabindex", "0");
+totalLikeCounter.setAttribute("tabindex", "0");
 pricey.textContent = photographer.price + "€ / jour";
 
 
