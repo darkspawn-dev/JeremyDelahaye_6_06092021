@@ -1,5 +1,5 @@
-import { Photographer } from "../entities/photographer.js";
-import { PhotographerCardFactory } from "../factories/photographerCardFactory.js";
+import { Photographer } from "../entities/Photographer.js";
+import { PhotographerCardFactory } from "../factories/PhotographerCardFactory.js";
 import { getData } from "../utils/data.js";
 
 // load photographers from data

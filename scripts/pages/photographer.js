@@ -1,8 +1,8 @@
-import { Photographer } from "../entities/photographer.js";
+import { Photographer } from "../entities/Photographer.js";
 import { getData } from "../utils/data.js";
-import { Image, Video } from "../entities/media.js";
-import { MediaGallery } from "../entities/mediaGallery.js";
-import { Modal } from "../entities/modal.js"
+import { Image, Video } from "../entities/Media.js";
+import { MediaGallery } from "../entities/MediaGallery.js";
+import { Modal } from "../entities/Modal.js"
 
 // load photographer data based of id
 const photographerId = parseInt(
