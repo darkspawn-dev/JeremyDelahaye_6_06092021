@@ -1,3 +1,4 @@
+
 export class Lightbox {
   constructor(containerId) {
     this.container = document.getElementById(containerId);
@@ -13,19 +14,18 @@ export class Lightbox {
     this.toggleEvents() 
   }
 
-  //lighbox navigatuion
+
+  /* Ajout d'un écouteur d'événement au document. */
   toggleEvents() {
     const nav = (event) => {
       if (event.key === "Escape" && this.container.style.display === "block") {
         this.toggle();
       }
     }
-     
       document.addEventListener("keydown", nav);
-    
   }
 
-  //affichage de la lightbox
+  /* Basculer la visibilité de la lightbox. */
   toggle(media) {
     if (this.container.style.display === "none" && media) {
       this.container.style.display = "block";
@@ -35,7 +35,7 @@ export class Lightbox {
     }
   }
 
-  // affichage des medias de la lightbox
+  /* Affichage des médias dans la lightbox. */
   display(media) {
     let mediaContainer;
     if (media.type === "video") {

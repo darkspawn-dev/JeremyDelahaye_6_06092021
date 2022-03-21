@@ -2,6 +2,7 @@
 <html lang="fr">
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon.png">
@@ -46,10 +47,10 @@
       </div>
     </main>
     <div id="contact_modal">
-      <div class="modal" aria-hidden="true" role="dialog">
+      <div class="modal" aria-hidden="true" role="dialog" >
         <header>
           <h2>Contactez-moi<br /></h2>
-          <img id="closeModal" src="assets/icons/close.svg" alt="fermer" />
+          <img id="closeModal" src="assets/icons/close.svg" alt="fermer"/>
           
         </header>
         <div id="error_message"></div>
@@ -81,14 +82,16 @@
             name="message"></textarea>
           </div>
           <input
+          id="btnSubmit"
           class="button btn-submit"
+          role="button"
           type="submit"
           value="Envoyer"
         />
         </form>
       </div>
     </div>
-    <div id="lightboxContainer" class="lightbox_bg">
+    <div id="lightboxContainer" class="lightbox_bg" role="dialog">
       <div class="lightbox">
         <img class="lightbox-previous" alt="Précédent" tabindex="0" src="assets/icons/left.svg">
         <img class="images" alt="">

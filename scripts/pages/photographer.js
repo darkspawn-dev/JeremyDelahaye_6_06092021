@@ -65,7 +65,8 @@ select.addEventListener("change", (e) => gallery.render(e.target.value));
 
 
 
-// évenement modal ( ouverture, fermeture)
+/* Le code utilisé pour créer la fenêtre modale. */
+
 const contactModal = new Modal("contact_modal");
 const closeModal = document.getElementById('closeModal');
 closeModal.addEventListener("click", e => contactModal.close());

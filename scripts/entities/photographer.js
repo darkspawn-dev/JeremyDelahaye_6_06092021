@@ -1,3 +1,4 @@
+/* Cette classe est utilisée pour stocker des informations sur un photographe */
 export class Photographer{
     constructor(id, name, portrait, city, country, tagline, price) {
         this.id = id;

@@ -1,3 +1,4 @@
+/* La classe Modal est utilisée pour créer une fenêtre modale */
 export class Modal {
   elementId = null;
 
@@ -9,13 +10,23 @@ export class Modal {
 
   display() {
     this.style.display = "block";
+    document.addEventListener("keyup", (e) => {
+      if(e.key === "Escape") {
+        this.style.display = "none";
+      }
+    })
+    document.getElementById('first').focus();
   }
 
   close() {
     this.style.display = "none";
   }
+  /**
+ * *Ajoutez le nom du contact à l'élément d'en-tête.*
+ * @param data - Les données transmises à la fonction de rappel.
+ * @returns Rien.
+ */
 
-  // affichage nom dans le formulaire de contact
   contactName(data) {
     const { name } = data;
 
@@ -24,7 +35,9 @@ export class Modal {
     return header;
   }
 
-  // validation du formulaire & des champs
+
+
+/* Le code ci-dessus valide le formulaire. */
   validate() {
     let first = document.getElementById("first").value;
     let last = document.getElementById("last").value;
@@ -64,8 +77,11 @@ export class Modal {
     } else {
       console.log("Message:", message);
     }
-
+    document.getElementById('contact').reset();
+    document.getElementById("error_message").remove();
     console.log("Form Submitted Successfully!");
     return true;
   }
 }
+
+

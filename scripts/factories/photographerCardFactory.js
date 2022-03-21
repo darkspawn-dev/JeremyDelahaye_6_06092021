@@ -1,3 +1,5 @@
+/* Créer une carte HTML pour chaque photographe */
+
 export class PhotographerCardFactory {
 
     create(photographer) {
