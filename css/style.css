@@ -91,11 +91,6 @@ h1 {
 .photographer_section article h5 {
   color: #757575;
 }
-/* .photograph-header {
-  background-color: #fafafa;
-  height: 300px;
-  margin: 0 100px;
-} */
 
 .photograph-header {
   display: grid;
@@ -400,22 +395,21 @@ h1 {
   flex-direction: column;
 }
 
-#photograph-header {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-
-  width: auto;
+.photograph-header {
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+  margin-left: 20px;
+  width: 90%;
 }
 .photograph-header img {
   margin-left: 50px;
 }
-h2, h3, h4 {
-  margin-right: 30px;
+.photograph-header h2 {
+  font-size: 40px;
 }
-
 button {
-  margin-left: 30px;
+  margin-left: 10px;
 }
 #media-section {
   display: flex;
@@ -469,7 +463,7 @@ align-items: center;
    }
    
    #dropdown {
-     left: 38%;
+     left: 41%;
    }
 
    button {
