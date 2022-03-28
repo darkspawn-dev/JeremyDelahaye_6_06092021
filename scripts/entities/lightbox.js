@@ -1,3 +1,32 @@
+/* Le constructeur crée un conteneur pour la lightbox et y ajoute un bouton de fermeture.
+
+La fonction toggleEvents ajoute des écouteurs d'événement aux boutons précédent et suivant.
+
+La fonction bascule permet d'activer et de désactiver la lightbox.
+
+La fonction show affiche la lightbox.
+
+La fonction de masquage masque la lightbox.
+
+La fonction bascule permet d'activer et de désactiver la lightbox.
+
+La fonction show affiche la lightbox.
+
+La fonction de masquage masque la lightbox.
+
+La fonction bascule permet d'activer et de désactiver la lightbox.
+
+La fonction show affiche la lightbox.
+
+La fonction de masquage masque la lightbox.
+
+La fonction bascule permet d'activer et de désactiver la lightbox.
+
+La fonction show affiche la lightbox.
+
+La fonction de masquage masque la lightbox.
+
+La fonction bascule permet d'activer et de désactiver la lightbox. */
 
 export class Lightbox {
   constructor(containerId) {

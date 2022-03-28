@@ -1,3 +1,4 @@
 {
-    "docwriter.language": "French"
+    "docwriter.language": "French",
+    "liveServer.settings.port": 5501
 }

@@ -23,7 +23,6 @@ export class MediaCardFactory {
     const likeIcon = document.createElement("img");
     likeIcon.setAttribute("alt", "likes");
     likeIcon.setAttribute("tabindex", "0");
-    likeIcon.setAttribute("id", "icon")
     const likeCounter = document.createElement("span");
     likeIcon.classList.add("likeIcon");
     likeCounter.textContent = media.likes;

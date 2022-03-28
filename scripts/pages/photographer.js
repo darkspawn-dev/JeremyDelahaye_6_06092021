@@ -1,6 +1,7 @@
 import { Photographer } from "../entities/Photographer.js";
 import { getData } from "../utils/data.js";
-import { Image, Video } from "../entities/Media.js";
+import { Video } from "../entities/Video.js";
+import { Image } from "../entities/Image.js";
 import { MediaGallery } from "../entities/MediaGallery.js";
 import { Modal } from "../entities/Modal.js"
 

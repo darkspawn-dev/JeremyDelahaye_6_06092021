@@ -8,12 +8,6 @@
 
 }
 
-.photograph-header {
-  background-color: #fafafa;
-  height: 300px;
-  margin: 0 100px;
-}
-
 .contact_button {
   font-size: 20px;
   font-weight: bold;
@@ -51,11 +45,7 @@
 
 .modal header {
   justify-content: space-between;
-    width: 100%;
-}
-
-.modal header img {
-  cursor: pointer;
+  width: 100%;
 }
 
 .modal header h2 {
@@ -63,7 +53,13 @@
   font-family: DM Sans;
   font-weight: 400;
 }
-
+#closeModal {
+  position: absolute;
+  left: 90%;
+  top: 3%;
+  width: 42px;
+  height: 42px;
+}
 form {
   display: flex;
   width: 100%;
@@ -106,4 +102,50 @@ textarea {
   font-weight: 700;
   font-size: 18px;
   text-align: center;
+}
+
+
+@media screen and (max-width: 390px) {
+  .modal header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .modal header h2 {
+    font-size: 30px;
+    margin-left: 45px;
+  }
+
+.modal {
+  display: flex;
+  justify-content: center;
+  width: 390px;
+  height: 844px;
+  margin: 0;
+  padding-left: 25px;
+  padding-top: 0;
+}
+
+
+form input {
+  width: 290px;
+  height: 68px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+form label {
+  font-size: 30px;
+}
+textarea {
+  width: 290px;
+}
+#closeModal {
+  position: absolute;
+  left: 75%;
+  top: 6%;
+  width: 32px;
+  height: 32px;
+}
 }

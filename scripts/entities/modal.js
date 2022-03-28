@@ -1,4 +1,4 @@
-/* La classe Modal est utilisée pour créer une fenêtre modale */
+/* Création d'une fenêtre modale. */
 export class Modal {
   elementId = null;
 
@@ -21,12 +21,12 @@ export class Modal {
   close() {
     this.style.display = "none";
   }
+
   /**
  * *Ajoutez le nom du contact à l'élément d'en-tête.*
  * @param data - Les données transmises à la fonction de rappel.
- * @returns Rien.
+ * @returns String.
  */
-
   contactName(data) {
     const { name } = data;
 
@@ -35,52 +35,54 @@ export class Modal {
     return header;
   }
 
-
-
-/* Le code ci-dessus valide le formulaire. */
+ /**
+  * Il valide le formulaire et renvoie vrai ou faux.
+  * @returns boolean.
+  */
   validate() {
     let first = document.getElementById("first").value;
     let last = document.getElementById("last").value;
 
     let email = document.getElementById("email").value;
     let message = document.getElementById("message").value;
-    let error_message = document.getElementById("error_message");
+    let error = document.getElementById("error");
 
-    error_message.style.padding = "5px";
+
+    // error.style.padding = "5px";
 
     let text;
-    if (first.length < 5) {
-      text = "Entrer un Prénom valide";
-      error_message.innerHTML = text;
+    if (first.length < 3) {
+      text = "Veuillez saisir 3 caractères minimum";
+      error.innerHTML = text;
       return false;
-    } else {
-      console.log("Nom:", first);
     }
-    if (last.length < 8) {
-      text = "Entrer un Nom valide";
-      error_message.innerHTML = text;
+ 
+    if (last.length < 4) {
+      text = "Veuillez saisir 4 caractères minimum";
+      error.innerHTML = text;
       return false;
-    } else {
-      console.log("Prénom:", last);
-    }
+    } 
     if (email.indexOf("@") == -1 || email.length < 6) {
       text = "Entrer une Email valide";
-      error_message.innerHTML = text;
+      error.innerHTML = text;
       return false;
-    } else {
-      console.log("Email:", email);
     }
-    if (message.length <= 10) {
-      text = "Entrer minimum 10 caracteres";
-      error_message.innerHTML = text;
+    if (message.length <= 5) {
+      text = "Entrer minimum 5 caracteres";
+      error.innerHTML = text;
       return false;
-    } else {
-      console.log("Message:", message);
-    }
+    } 
+
     document.getElementById('contact').reset();
-    document.getElementById("error_message").remove();
+    error.innerHTML = "";
+    console.log("Nom:", first);
+    console.log("Prénom", last);
+    console.log("Mail", email);
+    console.log("Message:", message);
     console.log("Form Submitted Successfully!");
+    
     return true;
+    
   }
 }
 

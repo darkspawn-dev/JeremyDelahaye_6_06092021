@@ -91,6 +91,11 @@ h1 {
 .photographer_section article h5 {
   color: #757575;
 }
+/* .photograph-header {
+  background-color: #fafafa;
+  height: 300px;
+  margin: 0 100px;
+} */
 
 .photograph-header {
   display: grid;
@@ -272,7 +277,7 @@ option[value]{
 }
 
 /****************** Form *******************/
-#error_message {
+#error {
   margin-top: 35px;
   margin-bottom: 0;
   background: #911c1c;
@@ -283,6 +288,7 @@ option[value]{
   width: 100%;
   color: white;
 }
+
 /****************** Form fin *******************/
 
 /****************** lightbox *******************/
@@ -374,53 +380,156 @@ background: #FFFFFF
 /****************** lightbox fin *******************/
 
 /****************** responsive *******************/
-@media screen and (max-width: 1200px) {
-  .photograph-header {
-    width: 80%;
-    justify-content: space-between;
-  }
-  .photographer_section article h2 {
-    font-size: 30px;
-  }
-  .photograph-header h2 {
-    font-size: 35px;
-    flex-direction: row;
-    margin-left: 30px;
-  }
 
-  .photograph-header img {
-    margin-right: 40px;
-    height: 200px;
-    width: 200px;
-  }
-
-  .photograph-header h3 {
-    margin-top: 100px;
-  }
-  .photograph-header h3,
-  .photograph-header h4 {
-    margin-left: 30px;
-  }
-
-  .photograph-header button {
-    margin-right: 30px;
-  }
-  .media-section {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    margin: 150px 0;
-    justify-items: center;
-    justify-content: center;
-    align-content: center;
-    position: absolute;
-    column-gap: 100px;
-    row-gap: 15px;
-    width: 100%;
-  }
-
-  .lightbox .lightbox-close {
-    bottom: 50%;
-    width: 42px;
-    height: 42px;
-  }
+@media screen and (max-width: 390px) {
+header{
+  display: flex;
+  justify-content: center;
+  margin-left: -150px;
 }
+.logo{
+  width: 100px;
+}
+
+h1 {
+  margin-left: 50px;
+  width: 50px 
+}
+#photographer_section {
+  display: flex;
+  flex-direction: column;
+}
+
+#photograph-header {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+
+  width: auto;
+}
+.photograph-header img {
+  margin-left: 50px;
+}
+h2, h3, h4 {
+  margin-right: 30px;
+}
+
+button {
+  margin-left: 30px;
+}
+#media-section {
+  display: flex;
+align-items: center;
+  margin-top: 100px;
+  flex-direction: column;
+}
+
+#LikeTotal {
+  margin-right: 4px;
+  height:70px;
+  width: 80%;
+}
+.dropdown {
+ right: 20%;
+}
+
+#dropdown {
+  right: 95px;
+}
+#closeModal{
+  position: absolute;
+  right: 100px;
+}
+
+.lightbox .lightbox-close {
+  bottom: 36%;
+  width: 32px;
+  height: 32px;
+}
+}
+
+@media screen and (min-width: 391px) and (max-width: 911px) {
+  #media-section {
+    display: flex;
+  align-items: center;
+    margin-top: 100px;
+    flex-direction: column;
+  }
+  #photograph-header {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+  }
+  .photograph-header img {
+    margin-left: 50px;
+  }
+  .dropdown {
+    left: 12%;
+   }
+   
+   #dropdown {
+     left: 38%;
+   }
+
+   button {
+     margin-left: 50px;
+   }
+  }
+
+  @media screen and (min-width: 912px) and (max-width: 1440px){
+    #photograph-header {
+      width: 80%;
+      margin: 50px 50px;
+    }
+    .photographer_section article h2 {
+      font-size: 30px;
+    }
+    .photograph-header h2 {
+      font-size: 35px;
+      flex-direction: row;
+      margin-left: 30px;
+    }
+  
+    .photograph-header img {
+      margin-right: 40px;
+      height: 200px;
+      width: 200px;
+    }
+  
+    .photograph-header h3 {
+      margin-top: 100px;
+    }
+    .photograph-header h3,
+    .photograph-header h4 {
+      margin-left: 30px;
+    }
+  
+    .photograph-header button {
+      margin-right: 30px;
+    }
+    .media-section {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+
+      justify-items: center;
+      justify-content: center;
+      align-content: center;
+      position: absolute;
+      column-gap: 100px;
+      row-gap: 15px;
+      margin-left: 50px;
+      width: 80%;
+    }
+  
+    .lightbox .lightbox-close {
+      bottom: 50%;
+      width: 42px;
+      height: 42px;
+    }
+    #LikeTotal {
+      margin-right: 180px;
+      height:70px;
+  
+    }
+  }
