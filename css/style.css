@@ -155,7 +155,7 @@ h1 {
   justify-content: center;
   align-content: center;
   position: absolute;
-  column-gap: 100px;
+  column-gap: 180px;
   row-gap: 15px;
   width: 100%;
 }
@@ -477,10 +477,11 @@ align-items: center;
    }
   }
 
-  @media screen and (min-width: 912px) and (max-width: 1440px){
+  @media screen and (min-width: 912px) and (max-width: 1339px){
     #photograph-header {
-      width: 80%;
-      margin: 50px 50px;
+      width: 90%;
+      margin-left: 45px;
+   
     }
     .photographer_section article h2 {
       font-size: 30px;
@@ -509,17 +510,12 @@ align-items: center;
       margin-right: 30px;
     }
     .media-section {
-      display: grid;
       grid-template-columns: repeat(2, auto);
+      width: 90%;
 
-      justify-items: center;
-      justify-content: center;
-      align-content: center;
-      position: absolute;
-      column-gap: 100px;
+      column-gap: 120px;
       row-gap: 15px;
-      margin-left: 50px;
-      width: 80%;
+    margin-left: 45px;
     }
   
     .lightbox .lightbox-close {
@@ -527,9 +523,14 @@ align-items: center;
       width: 42px;
       height: 42px;
     }
-    #LikeTotal {
-      margin-right: 180px;
-      height:70px;
-  
+  }
+
+  @media screen and (width: 1440px) and (max-height: 900px){
+    .media-section {
+      grid-template-columns: repeat(3, auto);
+      width: 90%;
+      column-gap: 92px;
+      row-gap: 15px;
+    margin-left: 70px;
     }
   }
