@@ -1,5 +1,5 @@
-import { MediaCardFactory } from "../factories/MediaCardFactory.js";
-import { Lightbox } from "./Lightbox.js";
+import { MediaCardFactory } from "../factories/mediaCardFactory.js";
+import { Lightbox } from "./lightbox.js";
 
 /* Le constructeur crée un nouvel objet Lightbox et le stocke dans la propriété `lightbox`.
 Il crée également un nouvel objet `MediaGallery` et le stocke dans la propriété `media`.
