@@ -1,4 +1,4 @@
-/* La classe Media est une classe qui représente un seul objet média. */
+// La classe Media est une classe qui représente un seul objet média
 export default class Media {
     constructor(id, photographer, title, src, likes, date, price) {
         this.id = id;
