@@ -1,4 +1,4 @@
-import { MediaCardFactory } from "../factories/MediaCardFactory.js";
+import { MediaCardFactory } from "../factories/mediaCardFactory.js";
 import { Lightbox } from "./Lightbox.js";
 
 /* Le constructeur crée un nouvel objet Lightbox et le stocke dans la propriété `lightbox`.
