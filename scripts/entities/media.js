@@ -4,7 +4,7 @@ export default class Media {
         this.id = id;
         this.photographer = photographer;
         this.title = title;
-        this.src = `./assets/images/${photographer.id}/${src}`;
+        this.src = `assets/images/${photographer.id}/${src}`;
         this.likes = likes;
         this.date = date;
         this.price = price;

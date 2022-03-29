@@ -469,6 +469,12 @@ align-items: center;
    button {
      margin-left: 50px;
    }
+   .photographer_section article h2 {
+    font-size: 24px
+  }
+  .photographer_section article h4 {
+    font-size: 12px;
+  }
   }
 
   @media screen and (min-width: 912px) and (max-width: 1339px){
@@ -477,11 +483,9 @@ align-items: center;
       margin-left: 45px;
    
     }
-    .photographer_section article h2 {
-      font-size: 30px;
-    }
+   
     .photograph-header h2 {
-      font-size: 35px;
+      font-size: 3px;
       flex-direction: row;
       margin-left: 30px;
     }
@@ -491,6 +495,7 @@ align-items: center;
       height: 200px;
       width: 200px;
     }
+    
   
     .photograph-header h3 {
       margin-top: 100px;
@@ -527,4 +532,5 @@ align-items: center;
       row-gap: 15px;
     margin-left: 70px;
     }
+
   }
