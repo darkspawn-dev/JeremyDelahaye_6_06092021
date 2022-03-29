@@ -1,4 +1,4 @@
-import { Photographer } from "../entities/photographer.js";
+import { Photographer } from "../entities/Photographer.js";
 import { getData } from "../utils/data.js";
 import { Video } from "../entities/Video.js";
 import { Image } from "../entities/Image.js";
