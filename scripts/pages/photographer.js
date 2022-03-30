@@ -1,9 +1,9 @@
 import { Photographer } from "./../entities/photographer.js";
-import { getData } from "./../utils/data.js";
-import { Video } from "./../entities/video.js";
-import { Image } from "./../entities/image.js";
+import { getData }  from "./../utils/data.js";
+import { Video } from "../entities/Video.js";
+import { Image } from "./../entities/Image.js";
 import { MediaGallery } from "./../entities/mediaGallery.js";
-import { Modal } from "./../entities/modal.js";
+import { Modal } from "../entities/modal.js";
 
 // load photographer data based of id
 const photographerId = parseInt(
@@ -66,7 +66,7 @@ select.addEventListener("change", (e) => gallery.render(e.target.value));
 
 
 
-/* Le code utilisé pour créer la fenêtre modale. */
+//Le code utilisé pour créer la fenêtre modale
 
 const contactModal = new Modal("contact_modal");
 const closeModal = document.getElementById('closeModal');

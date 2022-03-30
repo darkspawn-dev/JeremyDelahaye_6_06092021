@@ -1,4 +1,4 @@
-/* Création d'une fenêtre modale. */
+// Création d'une fenêtre modale
 export class Modal {
   elementId = null;
 

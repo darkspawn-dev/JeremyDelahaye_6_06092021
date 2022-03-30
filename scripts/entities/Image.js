@@ -1,4 +1,4 @@
-import  Media  from "./media.js"
+import Media from "./media.js"
 /* Cette classe est un enfant de la classe Media. Elle a toutes les mêmes propriétés que la classe
 Media, mais elle a aussi une propriété de type qui est définie sur "image" */
 
