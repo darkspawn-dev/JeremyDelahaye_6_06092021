@@ -58,6 +58,9 @@ const media = mediaData
     return new Image(id, photographer, title, image, likes, date, price);
   });
 
+/* Cela crée une nouvelle instance de la classe MediaGallery et transmet le tableau de médias. Le
+tableau de médias est ensuite passé à la méthode de rendu qui rendra les médias en fonction de la
+valeur du menu déroulant. */
 const gallery = new MediaGallery("media-section","totalLikeCounter","lightboxContainer", media)
 gallery.render("Popularité");
 
@@ -66,8 +69,12 @@ select.addEventListener("change", (e) => gallery.render(e.target.value));
 
 
 
-//Le code utilisé pour créer la fenêtre modale
 
+
+/* Le code ci-dessus crée un modal qui s'affichera lorsque l'utilisateur cliquera sur le bouton
+modalOpen. Le modal se fermera également lorsque l'utilisateur cliquera sur le bouton closeModal. Le
+modal validera également l'entrée de l'utilisateur et fermera le modal si l'entrée de l'utilisateur
+est valide. */
 const contactModal = new Modal("contact_modal");
 const closeModal = document.getElementById('closeModal');
 closeModal.addEventListener("click", e => contactModal.close());
