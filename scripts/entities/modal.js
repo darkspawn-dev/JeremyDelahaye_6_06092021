@@ -8,6 +8,9 @@ export class Modal {
     this.style = this.modal.style;
   }
 
+/**
+ * Il affiche l'élément div et se concentre sur le premier élément d'entrée.
+ */
   display() {
     this.style.display = "block";
     document.addEventListener("keyup", (e) => {
@@ -52,13 +55,13 @@ export class Modal {
 
     let text;
     if (first.length < 3) {
-      text = "Veuillez saisir 3 caractères minimum";
+      text = "Prénom : Veuillez saisir 3 caractères minimum";
       error.innerHTML = text;
       return false;
     }
  
     if (last.length < 4) {
-      text = "Veuillez saisir 4 caractères minimum";
+      text = "Nom : Veuillez saisir 4 caractères minimum";
       error.innerHTML = text;
       return false;
     } 
@@ -68,7 +71,7 @@ export class Modal {
       return false;
     }
     if (message.length <= 5) {
-      text = "Entrer minimum 5 caracteres";
+      text = "Message : Entrer minimum 5 caracteres";
       error.innerHTML = text;
       return false;
     } 
